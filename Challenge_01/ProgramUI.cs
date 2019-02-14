@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Challenge_01
 {
-    class Program
+    class ProgramUI
     {
-        static void Main(string[] args)
+        internal void Run()
         {
-            ProgramUI program = new ProgramUI();
-            program.Run();
+            throw new NotImplementedException();
         }
     }
 }
