@@ -14,7 +14,8 @@ namespace Challenge_02
         public void Run()
         {
             _claimQueue = _claimRepository.GetClaimQueue();
-            while (_response != 5)
+            SeedClaimData();
+            while (_response != 4)
             {
                 PrintClaimsMenu();
                 switch (_response)
@@ -38,7 +39,7 @@ namespace Challenge_02
                 }
                 Console.WriteLine("Press any key to continue.");
                 Console.ReadKey();
-                Console.Clear();
+             
             }
         }
 
@@ -51,7 +52,7 @@ namespace Challenge_02
                 "4. Exit");
 
             Console.WriteLine("Press any key to continue.");
-            Console.ReadKey();
+           _response = int.Parse(Console.ReadLine());
             Console.Clear();
         }
         private void NextClaimInQueue()
@@ -114,6 +115,11 @@ namespace Challenge_02
                     break;
             }
             return type;
+        }
+        private void SeedClaimData()
+        {
+            _claimRepository.EnqueueClaim(new Claim(1, ClaimType.Car, "accident on 465", 400, new DateTime(2018, 4, 25), new DateTime(2018, 04, 28), true));
+            _claimRepository.EnqueueClaim(new Claim(2, ClaimType.Home, "House fire in kitchen", 4000, new DateTime(2018, 4, 26), new DateTime(2018, 4, 26), true));
         }
     }
 }

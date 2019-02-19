@@ -20,7 +20,7 @@ namespace Challenge_02
             _queueOfClaim.Enqueue(claim);
         }
 
-        public void DequeueClaim()
+        public void DequeueClaim(Claim claim)
         {
             _queueOfClaim.Dequeue();
         }
