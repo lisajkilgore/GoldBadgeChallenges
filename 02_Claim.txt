@@ -23,11 +23,16 @@ A ClaimType could be the following:
 
 
 The app will need methods to do the following: 
+
 Show a claims agent a menu:
 
+
 Choose a menu item:
+
 1. See all claims
+
 2. Take care of next claim
+
 3. Enter a new claim
 
 
@@ -72,7 +77,8 @@ If the agent presses 'n', it will go back to the main menu.
 
 For #3, when a claims agent enters new data about a claim they will be prompted for questions about it:
 
-	Enter the claim id: 4
+	
+Enter the claim id: 4
 	
 Enter the claim type: Car
 	
@@ -97,5 +103,5 @@ Your goal is to do the following:
 
 3. Create a Test Class for your repository methods.
 
-4. Create a Program file that allows a claims manager to manage items in a list of claims.
+4. Create a Program UI file that allows a claims manager to manage items in a list of claims.
  
