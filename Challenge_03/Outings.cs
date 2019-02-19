@@ -28,5 +28,12 @@ namespace Challenge_03
         {
 
         }
+
+        public Outings(EventType eventType, decimal totalCostEvent)
+        {
+            TypeOfEvent = eventType;
+            TotalCostEvent = totalCostEvent;
+        }
+           
     }
 }

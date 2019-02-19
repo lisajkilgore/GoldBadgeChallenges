@@ -6,7 +6,45 @@ using System.Threading.Tasks;
 
 namespace Challenge_03
 {
-    class OutingsRepository
+    public class OutingsRepository
     {
+        List<Outings> _listOfOutings = new List<Outings>();
+
+        public void AddOutingsToList(Outings outings)
+        {
+            _listOfOutings.Add(outings);
+        }
+
+        public List<Outings> GetOutingsList()
+        {
+            return _listOfOutings;
+        }
+
+        public decimal GetOutingsByType(EventType eventType)
+        {
+            decimal totalCost = 0;
+            foreach (Outings outing in _listOfOutings)
+            {
+                if (eventType == outing.TypeOfEvent)
+                {
+                    totalCost += outing.TotalCostEvent;
+                }
+
+            }
+            return totalCost;
+        }
+
+        public decimal GetTotalCost()
+        {
+            decimal totalCost = 0;
+            foreach (Outings outing in _listOfOutings)
+            {
+                totalCost += outing.TotalCostEvent;
+            }
+            return totalCost;
+        }
+
+
     }
+
 }
