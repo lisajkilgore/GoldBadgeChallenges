@@ -53,7 +53,7 @@ namespace Challenge_03
         {
             int number = EventTypeMenu();
             EventType eventType = GetType(number);
-            decimal cost = _outingsRepository.GetOutingsByType(eventType);
+            decimal cost = _outingsRepository.GetOutingsCostByType(eventType);
             Console.WriteLine($"Cost was: {cost} for all {eventType} outings");
         }
 

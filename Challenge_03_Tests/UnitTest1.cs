@@ -70,7 +70,7 @@ namespace Challenge_03_Tests
             _outingsRepository.AddOutingsToList(outingsThree);
 
             //Act
-            decimal actual = _outingsRepository.GetOutingsByType(EventType.Golf);
+            decimal actual = _outingsRepository.GetOutingsCostByType(EventType.Golf);
             decimal expected = 1050m;
 
             //Assert 
@@ -97,7 +97,7 @@ namespace Challenge_03_Tests
             _outingsRepository.AddOutingsToList(outingsThree);
 
             //Act
-            decimal actual = _outingsRepository.GetOutingsByType(EventType.Bowling);
+            decimal actual = _outingsRepository.GetOutingsCostByType(EventType.Bowling);
             decimal expected = 250m;
 
             //Assert 

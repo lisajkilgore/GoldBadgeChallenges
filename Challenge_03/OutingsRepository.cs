@@ -20,7 +20,7 @@ namespace Challenge_03
             return _listOfOutings;
         }
 
-        public decimal GetOutingsByType(EventType eventType)
+        public decimal GetOutingsCostByType(EventType eventType)
         {
             decimal totalCost = 0;
             foreach (Outings outing in _listOfOutings)
